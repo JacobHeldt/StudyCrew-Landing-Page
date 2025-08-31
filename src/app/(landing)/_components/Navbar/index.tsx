@@ -12,13 +12,6 @@ const Navbar: React.FC = () => {
   const { activeSection, setActiveSection } = useSection()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [menuTop, setMenuTop] = useState(0)
-  const navbarRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (navbarRef.current) {
-      setMenuTop(navbarRef.current.clientHeight)
-    }
-  }, [])
 
   const handleNavLinkClick = (sectionId: string) => {
     setIsMenuOpen(false)
@@ -41,11 +34,15 @@ const Navbar: React.FC = () => {
   const navLinkStyleMobile = `ml-7 text-left ${navLinkStyle}`
 
   return (
-    <div>
+    <div className='fixed top-0 left-0 w-screen z-50'>
+    <div className="md:py-3.5 py-2 bg-[#FFEDCC] text-[#0B1B33] flex items-center justify-center text-center z-50">
+      <p className="text-sm md:text-base mx-4 md:mx-12">
+        Unfortunately, this project was not completed due to development challenges and declining activity in the open-source repository.
+      </p>
+    </div>
       {/* Navbar */}
       <nav
-        ref={navbarRef}
-        className="fixed top-0 left-0 z-50 w-screen bg-white border-b border-gray-200 py-3 flex items-center justify-between md:grid md:grid-cols-2"
+        className="bg-white border-b border-gray-200 py-3 flex items-center justify-between md:grid md:grid-cols-2"
       >
         {/* Logo */}
         <div className="ml-7 md:ml-32">
