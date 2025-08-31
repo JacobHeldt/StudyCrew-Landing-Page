@@ -4,7 +4,7 @@ import HeroWord from './HeroWord'
 
 const Hero = (): JSX.Element => {
   return (
-    <div className="md:mx-16 mx-7 mt-28 md:mt-44 mb-16 text-center">
+    <div className="md:mx-16 mx-7 mt-44 md:mt-48 mb-16 text-center">
       <h1 className="text-5xl leading-snug md:text-7xl md:leading-tight font-medium">
         The Future of Education is <br />
         <HeroWord />
